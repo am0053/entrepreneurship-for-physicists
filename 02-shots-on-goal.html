@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Shots on Goal – Entrepreneurship for Physicists</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03-dont-die.html" rel="next">
+<link href="./01-fat-tails.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8575377b15774f46c10fa1d7752ca172.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+  #quarto-sidebar .sidebar-item:has(> .sidebar-item-container a[href$="index.html"]),
+  #quarto-sidebar .sidebar-item:has(> .sidebar-item-container a[href$="/"]) { display: none; }
+  .nav-page-previous:has(a[href$="index.html"]),
+  .nav-page-previous:has(a[href$="/"]) { visibility: hidden; }
+</style>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="assets/book.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fat-tails.html">Part I. The distribution you live in</a></li><li class="breadcrumb-item"><a href="./02-shots-on-goal.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shots on Goal</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Entrepreneurship for Physicists</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Part I. The distribution you live in</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-fat-tails.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">A World of Fat Tails</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-shots-on-goal.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shots on Goal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-dont-die.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Don’t Die</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#startup-returns-are-fat-tailed" id="toc-startup-returns-are-fat-tailed" class="nav-link active" data-scroll-target="#startup-returns-are-fat-tailed">Startup returns are fat-tailed</a></li>
+  <li><a href="#how-investors-respond-and-why-you-should-care" id="toc-how-investors-respond-and-why-you-should-care" class="nav-link" data-scroll-target="#how-investors-respond-and-why-you-should-care">How investors respond, and why you should care</a></li>
+  <li><a href="#rule-1-create-convex-bets-and-then-maximize-variance" id="toc-rule-1-create-convex-bets-and-then-maximize-variance" class="nav-link" data-scroll-target="#rule-1-create-convex-bets-and-then-maximize-variance">Rule 1: create convex bets and then maximize variance</a></li>
+  <li><a href="#rule-2-the-number-of-draws-is-the-lever-you-control" id="toc-rule-2-the-number-of-draws-is-the-lever-you-control" class="nav-link" data-scroll-target="#rule-2-the-number-of-draws-is-the-lever-you-control">Rule 2: the number of draws is the lever you control</a></li>
+  <li><a href="#rule-3-do-not-truncate-your-own-tail" id="toc-rule-3-do-not-truncate-your-own-tail" class="nav-link" data-scroll-target="#rule-3-do-not-truncate-your-own-tail">Rule 3: do not truncate your own tail</a></li>
+  <li><a href="#rule-4-cap-the-downside-first" id="toc-rule-4-cap-the-downside-first" class="nav-link" data-scroll-target="#rule-4-cap-the-downside-first">Rule 4: cap the downside first</a></li>
+  <li><a href="#each-draw-from-a-fat-tailed-distribution-teaches-you-very-little" id="toc-each-draw-from-a-fat-tailed-distribution-teaches-you-very-little" class="nav-link" data-scroll-target="#each-draw-from-a-fat-tailed-distribution-teaches-you-very-little">Each draw from a fat-tailed distribution teaches you very little</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-fat-tails.html">Part I. The distribution you live in</a></li><li class="breadcrumb-item"><a href="./02-shots-on-goal.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shots on Goal</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Shots on Goal</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="thesis">
+<p>When outcomes are fat-tailed, most of the expected value resides in a small number of rare, but not impossible, results. Knowing this, you can respond strategically by arranging your bets so that the rare result is allowed to happen, while the many common ones do not kill you. When one or two goals are all you need, make sure you can keep shooting.</p>
+</div>
+<p>Chapter 1 argued that company outcomes belong to the fat-tailed world. This fact is at the foundation of the VC funding model, which we will start exploring here. Recall that in a fat-tailed world, a small number of outcomes dominates the overall result. VCs take advantage of this by making a variety of bets, knowing that many will fail, but only the few successes really matter. You, as a founder with only one company, are perhaps not so wise. Or are you? In this chapter we will arrive at four rules for a founder. The chapter ends with an uncomfortable corollary about how little a single outcome can teach you.</p>
+<section id="startup-returns-are-fat-tailed" class="level2">
+<h2 class="anchored" data-anchor-id="startup-returns-are-fat-tailed">Startup returns are fat-tailed</h2>
+<p>A <strong>financing</strong> is one investment round in one company, and its <strong>return multiple</strong> is the money eventually returned to those investors divided by the money they put in. Correlation Ventures, a venture firm, compiled the multiples for more than 21,000 financings of US startups between 2004 and 2013.</p>
+<div id="fig-02-vc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-02-vc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="book-fig" data-fig="f02-vc">
+
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-02-vc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Distribution of return multiples across roughly 21,000 US venture financings, 2004–2013. Data: Correlation Ventures, as published by Seth Levine.
+</figcaption>
+</figure>
+</div>
+<p>About 65% of financings returned less than the amount invested. About 4% returned ten times or more, and 0.4% returned fifty times or more. Note that these are companies that had already convinced professional investors to fund them, so the high return outcomes are even more rare if you count all of the companies that failed before even getting funding.</p>
+<p>The counts in <a href="#fig-02-vc" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> also understate the skew in dollar terms, because a 50× winner gets lumped in with 500× winners. Horsley Bridge, an investor in many venture funds, shared three decades of data with the firm Andreessen Horowitz: about 6% of investments produced about 60% of all the returns. In 2012 Paul Graham wrote that two companies accounted for roughly three-quarters of the combined value of everything the accelerator Y Combinator had funded up to then. That’s two out of about 400 companies accounting for a large majority of the total value.</p>
+<p>Clearly, venture-backed startup outcomes are fat-tailed. These numbers are what the 80/20 power law of chapter 1 looks like in dollars.</p>
+</section>
+<section id="how-investors-respond-and-why-you-should-care" class="level2">
+<h2 class="anchored" data-anchor-id="how-investors-respond-and-why-you-should-care">How investors respond, and why you should care</h2>
+<p>VC investors know that they are getting returns from a fat-tailed distribution, and much of their mindset and behavior is explained accordingly. A venture fund typically holds a <strong>portfolio</strong>: twenty to forty companies bought with one pool of money. If 6% of investments produce 60% of the returns, the entire fund’s result depends on whether it happens to hold the one or two outliers. Everything else, the other couple dozen startups, is noise.</p>
+<p>Three behaviors follow from this situation, and each one affects you as a founder directly:</p>
+<p><strong>First, investors select for the size of the best case, far more than for the probability of success.</strong> An investor’s question when evaluating a company is always “if this works, can it return my whole fund?” A company with an 80% chance of becoming a solid business worth $60 million is, for a $200 million fund, a worse investment than one with a 5% chance of being worth $1 billion. In both cases, the expected value is around $50 million. For the former business, if the fund owns 20%, it ends up with around $12 million, which is noise compared to the total fund size. For the other business, success returns $200 million, thereby returning the fund. Chris Dixon called this the Babe Ruth effect, after the baseball player who led the league in both home runs and strikeouts: the best funds in the Horsley Bridge data lost money on <em>more</em> of their investments than mediocre funds did, striking out more often, but then made it back on the size of their hits. In the world of fat tails, a small number of results dominate.</p>
+<p>Before moving on, consider what world you want to live in. You might be devoting the next ten or more years of your life to starting a company. Would you rather put that bet on the company with an 80% chance of being worth $60 million and a 20% chance of being worth nothing, or the one with a 5% chance of $1 billion and 95% chance of nothing?</p>
+<p><strong>After investing, the VCs will push you toward variance.</strong> A strategy that raises both the chance of failure and the size of the best case can be attractive to someone who holds thirty companies, but highly unattractive to a founder who holds one. This is a real conflict of interest, and it is structural. We will explore this more in chapter 3.</p>
+<p><strong>Your investors will not care if you are mildly successful.</strong> A company that is growing steadily toward a modest outcome lands in that 80%-chance-of-$60-million regime. For you, this could be great, but for the investor, it costs them the time it takes to sit on the board, and promises a negligible reward. If your honest ambition is a profitable $10 million business, venture capital is the wrong fuel, and the kindest thing you can do for everyone involved is to work that out before you take the money.</p>
+<p>While these statistics may often put the incentives of investors and founders at odds, as founders there are also important lessons we can take away from the VC mindset.</p>
+</section>
+<section id="rule-1-create-convex-bets-and-then-maximize-variance" class="level2">
+<h2 class="anchored" data-anchor-id="rule-1-create-convex-bets-and-then-maximize-variance">Rule 1: create convex bets and then maximize variance</h2>
+<p>A key feature of many fat-tailed distributions is that the variance is very large, and for power-law distributions with <span class="math inline">\alpha&lt;2</span> it is infinite. When you can make the way your payoff depends on a distribution <strong>convex</strong>, then that large variance works to your advantage.</p>
+<p>You can think of a payoff as a combination of the uncertain outcome of the outside world, <span class="math inline">X</span>, and some payoff function <span class="math inline">f(X)</span> that you have some control over. For example, <span class="math inline">X</span> might be the value of a project, and <span class="math inline">f(X)</span> could represent how you choose to pursue that project. The value of the project is probably fat-tailed, and could be highly negative (e.g., a project that goes far over budget without being successful), or highly positive (e.g., a project that is easier than expected and creates a new product that becomes the primary revenue driver for the whole company). Going into the project, you don’t know which way it will go. A sensible person would likely not fully commit to the project right from the start. Instead, you may want to do a lower-cost initial prototype, learn cheaply whether a good or bad outcome is more likely, and then choose whether to pursue the project or drop it. This is one method of making your payoff convex.</p>
+<p>A function <span class="math inline">f(X)</span> on an interval is convex if, for any two points on its graph, the straight line segment (chord) connecting them lies on or above the graph between them. This is true when the function’s slope never decreases as <span class="math inline">X</span> increases, which is the case whenever its second derivative is positive. A useful example of a convex bet is an <em>option</em>: a small, known cost now that buys the right, but not the obligation, to make a larger commitment later, once you know more. Sending a cold email to a dream customer, a cheap option on a patent, and building a two-week prototype for a new application are convex in this way: the worst case is a known, small cost, and if the result looks promising, meaning more likely to end up with a fat-tail result, then you invest further, while if it doesn’t, then you walk away. A payoff is <strong>concave</strong> when the gains are capped and the losses are open: a fixed-price development contract where costs could overrun indefinitely, a personal guarantee on a company loan, or skipping a safety review to save a week.</p>
+<p>For a convex payoff, uncertainty is an asset. This is expressed by Jensen’s inequality, which says that the expected value of your convex payoff is larger than the payoff that results from the average outcome. Mathematically, if <span class="math inline">f</span>, the payoff you get from a particular random outcome <span class="math inline">X</span>, is convex, then <span class="math inline">\mathbb{E}[f(X)] \ge f(\mathbb{E}[X])</span>, and the gap between <span class="math inline">\mathbb{E}[f(X)]</span> and <span class="math inline">f(\mathbb{E}[X])</span> widens with the spread of <span class="math inline">X</span>. Some examples of this are shown in <a href="#fig-02-jensen" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>.</p>
+<div id="fig-02-jensen" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-02-jensen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="book-fig" data-fig="f02-jensen">
+
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-02-jensen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Jensen’s inequality, drawn. In each panel the outcome <span class="math inline">X</span> is equally likely to land at either end of the dashed chord, so the average payoff <span class="math inline">\mathbb{E}[f(X)]</span> is the chord’s midpoint, while the payoff from the average outcome, <span class="math inline">f(\mathbb{E}[X])</span>, sits on the curve directly below or above it. The solid vertical segment is the gap. For a convex payoff the chord lies above the curve and the gap favors uncertainty; for a concave payoff it lies below and uncertainty costs you. Widening the spread of <span class="math inline">X</span> widens the gap. An option is convex only through its kink at <span class="math inline">K</span>, yet that is enough: averaging a loss avoided with a gain kept beats the zero you get from the average outcome.
+</figcaption>
+</figure>
+</div>
+<p>A worked case shows the size of the effect. Suppose a project would cost <span class="math inline">K</span> to carry out and would turn out to be worth <span class="math inline">X</span>, where <span class="math inline">X</span> is log-normal with mean equal to <span class="math inline">K</span>, so committing to it blind only breaks even on average. Now suppose a cheap experiment, such as a prototype or a pilot, tells you <span class="math inline">X</span> before you commit, and you go ahead only when <span class="math inline">X &gt; K</span>. The value of that right to choose is</p>
+<p><span class="math display">
+\mathbb{E}\big[\max(X - K,\, 0)\big] = K\left[\,2\,\Phi\!\left(\tfrac{\sigma}{2}\right) - 1\right] ,
+</span></p>
+<p>which is zero when there is no uncertainty and rises steadily with <span class="math inline">\sigma</span>, the standard deviation of <span class="math inline">\ln X</span>. If the experiment costs less than this, it is worth running, and it is worth more the less you know.</p>
+<div id="fig-02-option" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-02-option-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="book-fig" data-fig="f02-option">
+
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-02-option-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: A project whose average value only equals its cost <span class="math inline">K</span>. As uncertainty grows, the median project is worth less and the chance that it would lose money rises above 80%, yet the value of being able to check first and walk away keeps climbing.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-02-option" class="quarto-xref">Figure&nbsp;<span>2.3</span></a> contains the central tension of entrepreneurship. Moving right, the <em>typical</em> project gets worse: at <span class="math inline">\sigma = 2</span> the median project is worth 14% of its cost, and 84% of such projects would lose money if you committed to them blind. The value of the option gets better: <span class="math inline">0.20K</span> at <span class="math inline">\sigma = 0.5</span>, <span class="math inline">0.38K</span> at <span class="math inline">\sigma = 1</span> and <span class="math inline">0.68K</span> at <span class="math inline">\sigma = 2</span>. Both statements are true together. A project can be more likely to fail and an option on it more valuable, provided finding out is sufficiently cheap.</p>
+<p>Equity in a company is itself a convex instrument, because shareholders cannot lose more than they invested, but the value of the company can grow quite large. So, by founding a company, you are already making a convex bet. Now also think about it from an investor’s point of view. You may think that your company needs an investment of $100 million over five years to become a billion dollar company. However, you are not going to go out from day one and ask investors to put in $100 million. Generally investing happens in stages, such as Seed, Series A, Series B, etc. This allows investors to make smaller bets, often with pro rata rights that allow them to invest more in future rounds, and then wait to see if the startup is hitting an inflection point and maintaining the potential for a very large outcome. If not, they stop investing and lose a small amount that ends up being noise when compared to the fat-tail winners.</p>
+<p>The practical implication of Jensen’s inequality is that when you are making a convex bet, more variance is to your advantage. We saw this already in the VC math, where a small chance of a billion-dollar company is far more valuable than a near-certain but small outcome. Turn this to your advantage by sorting every decision by the shape of its payoff. Collect cheap bets with capped downside and open upside. When the upside is open, aim as big as you can. The converse is true when the upside is capped but the downside is open. No matter the expected value, be very careful if the downside is open, and try to minimize the variance.</p>
+</section>
+<section id="rule-2-the-number-of-draws-is-the-lever-you-control" class="level2">
+<h2 class="anchored" data-anchor-id="rule-2-the-number-of-draws-is-the-lever-you-control">Rule 2: the number of draws is the lever you control</h2>
+<p>You cannot choose the outcome of a draw from a fat-tailed distribution, and by its nature you can expect most draws to be below average. What you can choose how many draws you take. If each attempt has an independent probability <span class="math inline">p</span> of a large success, the chance of at least one in <span class="math inline">n</span> attempts is <span class="math inline">1 - (1-p)^n</span>. With <span class="math inline">p = 5\%</span> that is 5% for one attempt, 40% for ten and 79% for thirty.</p>
+<p>In terms of your end payoff, the size of the best result matters as much as its probability. This is where the difference between the thin-tailed and fat-tailed worlds is stark.</p>
+<div id="fig-02-bestof" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-02-bestof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="book-fig" data-fig="f02-bestof">
+
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-02-bestof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Typical best result out of n independent attempts, where the median attempt is worth 1. With thin tails, extra attempts buy almost nothing. With fat tails, the best result keeps growing with n.&nbsp;The log-normal and power-law curves cross: with few attempts the log-normal does better, with many the power law does.
+</figcaption>
+</figure>
+</div>
+<p>In a thin-tailed world, trying a thousand times instead of ten improves your best result from 1.45 to 1.96 times the median (<a href="#fig-02-bestof" class="quarto-xref">Figure&nbsp;<span>2.4</span></a>). In the log-normal world it goes from 9.5 to 121, and in the power-law world from 5.7 to 291. From the thin-tailed perspective, repeated attempts are clearly wasteful. When you are drawing from a fat-tailed set of outcomes, each new draw can dramatically increase your chance of getting an extreme result.</p>
+<p>Notice that the power-law curve starts out <em>below</em> the log-normal one and only passes it at around 100 attempts. With their medians matched, this log-normal puts more weight on moderately large outcomes (it beats 10× about 6% of the time, against 3.5% for the power law), while the power law puts more weight on the truly extreme ones. With only a handful of draws, your best result comes from that middle range, and the less fat-tailed distribution actually serves you better. Only with enough draws do you reach far enough into the tail for the fatter one to pull ahead, and from then on its lead keeps growing. So the number of attempts you can make is not a detail to settle after choosing what to pursue; it helps decide what is worth pursuing. A fat tail pays off only for those who sample it enough times to reach it.</p>
+<p>From the perspective of a startup, the number of draws you get is roughly</p>
+<p><span class="math display">
+n \approx \frac{\text{runway}}{\text{time per attempt}} \quad\text{or}\quad \frac{\text{budget}}{\text{cost per attempt}} ,
+</span></p>
+<p>whichever is smaller. This is the quantitative argument behind the advice to iterate quickly. Halving the cycle time of an experiment doubles the number of draws, and in a fat-tailed world that is worth far more than making each attempt 20% more likely to succeed. For a hardware company, where a prototype cycle can take months, this thought process makes the case for simulation, for renting equipment before buying it, for testing with a mock-up before the real device exists, and for any other trick that turns one expensive draw into several cheap ones.</p>
+<p>Two important qualifications to keep in mind: first, draws must be independent to count. Five features built for the same customer on the same assumption are still just one bet. Second, a draw must be a real exposure to the tail. Twenty conversations in which you never ask for money are zero draws from the distribution of sales.</p>
+</section>
+<section id="rule-3-do-not-truncate-your-own-tail" class="level2">
+<h2 class="anchored" data-anchor-id="rule-3-do-not-truncate-your-own-tail">Rule 3: do not truncate your own tail</h2>
+<p>Some choices put a ceiling on the possible payout, and so convert a fat-tailed bet into a thin-tailed one, or a convex bet into a concave one, or otherwise reduce the variance you are relying on. Putting in place a ceiling like this can be invisible at the time you accept it. Watch out for these:</p>
+<ul>
+<li><strong>A small market.</strong> The <strong>total addressable market</strong> (TAM) is the revenue you would have if every possible customer bought. It is the upper bound of your outcome distribution. A brilliant product in a $20 million market is capped at $20 million.</li>
+<li><strong>Exclusivity.</strong> Granting your first customer exclusive rights to a field, in exchange for an early contract, sells the tail to pay for the median. If the field is a small part of the total you are going after, maybe geographically or in a particular application, it can be worth it.</li>
+<li><strong>Cost-plus pricing.</strong> Pricing at cost plus a margin caps what you can earn at a multiple of what you spend. Pricing on the value delivered to the customer does not.</li>
+<li><strong>Dependence on your own hours, or another fundamentally limited input.</strong> A consulting business is bounded by hours times rate. It can be a fine business, but unless you’ve invented a time machine, it is a thin-tailed one.</li>
+</ul>
+<p>None of these is always the wrong choice. Each trades tail for more certainty. If you are going to make that trade, make sure it’s on purpose.</p>
+</section>
+<section id="rule-4-cap-the-downside-first" class="level2">
+<h2 class="anchored" data-anchor-id="rule-4-cap-the-downside-first">Rule 4: cap the downside first</h2>
+<p>The previous three rules assume the downside is limited. Making that true can take work and planning. For example, stage your spending so that no single test can consume the company. Prefer leases to purchases while the direction is uncertain. Keep fixed costs low until you have a tail outcome in sight. Avoid commitments that turn an ordinary disappointment into a fatal one, such as personal guarantees, large minimum order quantities, or customer penalties for late delivery.</p>
+<p>There is an asymmetry here that we will develop more in chapter 3. Upside rules are about increasing your expected value. Downside rules are about survival, and survival is a precondition for taking the next draw.</p>
+</section>
+<section id="each-draw-from-a-fat-tailed-distribution-teaches-you-very-little" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="each-draw-from-a-fat-tailed-distribution-teaches-you-very-little">Each draw from a fat-tailed distribution teaches you very little</h2>
+<p>So far in this chapter we have been exploring the implications and rules that go with living in a world of fat-tailed outcomes, mainly focused on how to maximize your outcomes. Most of this advice has focused on the structure of how to make a bet. But, you might ask, why not also spend effort making sure that you are taking a draw from a distribution with the best expected value, and avoiding other distributions with a lower chance of success?</p>
+<p>To illustrate this, imagine yourself as a VC. You might say: there are so many different early-stage founders making innovative companies with huge potential markets. All of them are good bets, so in order to do better than all of the other VCs out there, you’re only going to invest in the best, most skilled founders.</p>
+<p>For the sake of argument, suppose that skill is real and large: a skilled founder increases the median result by 65%, which is a shift of <span class="math inline">\delta = 0.5</span> in the mean of the logarithm of the outcome. Suppose outcomes are log-normal with <span class="math inline">\sigma = 2</span>, which is roughly what the venture data imply. Skill is thus a significant, but not dominant, factor. Suppose also that, by definition, skilled founders are rare, since if everyone were so skilled, then such skill would not produce a shift relative to the typical result. So, say that you are looking for founders who are one in a hundred.</p>
+<p>Now design a test. Look at each founder’s track record of <span class="math inline">n</span> companies, average the logarithms of their outcomes, and flag anyone whose average clears a specified threshold. If the founder is producing outcomes substantially above the mean, that means they must be skilled, right? Not necessarily. Such a test can go wrong in two ways: it can miss a founder who is skilled, but who got unlucky and did not have wildly successful outcomes for other reasons, or it can flag an average founder who happened to get really lucky. Because average founders outnumber skilled ones 99 to 1, this second error is the dangerous one for your goal of identifying skilled founders: even a small false-alarm rate, applied to 99 average founders, produces more flags than the one skilled founder can.</p>
+<p>Bayes’ rule makes this precise. The share of flagged founders who are actually skilled is</p>
+<p><span class="math display">
+P(\text{skilled} \mid \text{flagged}) = \frac{0.01 \times \text{power}}{0.01 \times \text{power} + 0.99 \times \text{false-alarm rate}} ,
+</span></p>
+<p>where the <strong>power</strong> is the chance that a skilled founder passes the test. In order for <span class="math inline">P(\text{skilled} \mid \text{flagged}) = 80\%</span>, a skilled founder must be <span class="math inline">(0.8/0.2) \times 99 = 396</span> times more likely to pass than an average one. Said another way, your test must be about 400 times more likely to catch a skilled founder than an unskilled one in order for a founder it flags to have only an 80% chance of actually being skilled.</p>
+<p>In order to have such a discriminating test, you will need to have a longer track record because the noise in the average shrinks as <span class="math inline">\sigma/\sqrt{n}</span> while the skill gap <span class="math inline">\delta</span> stays the same. Measured in standard errors, the separation between the skilled and unskilled founders grows as</p>
+<p><span class="math display">
+\frac{\delta\sqrt{n}}{\sigma} = \frac{\sqrt{n}}{4} .
+</span></p>
+<p>Instead of getting more data, one way to identify a skilled founder is to set an extreme threshold for your test, since a founder who is consistently producing extreme results is much more likely to be skilled (and also lucky). The tradeoff of this is that you will miss all of the less-lucky but still skilled founders. Since skilled founders are already rare, you don’t want to make this threshold too high, or else you won’t flag anybody at all. Let’s say you want to identify 50% of skilled founders, which would mean you’d expect to find one in every two hundred founders you test. In this case, you can put the threshold at the skilled founders’ expected average. The false-alarm rate is then <span class="math inline">\Phi(-\sqrt{n}/4)</span>, which is the chance that a normally distributed average lands more than <span class="math inline">\sqrt{n}/4</span> standard errors above its mean. The requirement <span class="math inline">0.5 / \Phi(-\sqrt{n}/4) \ge 396</span> gives <span class="math inline">\sqrt{n}/4 \ge 3.02</span>, or</p>
+<p><span class="math display">
+n \approx \left(\frac{3.02\,\sigma}{\delta}\right)^2 = \left(\frac{3.02 \times 2}{0.5}\right)^2 \approx 146 .
+</span></p>
+<p>In plain language: after watching every founder start 146 companies, this test would identify half of the skilled founders. The other half, who really are skilled, get unlucky often enough that they don’t pass the threshold. And for each founder the test does identify, there is still a 20% chance that they are not actually skilled, just an average founder on a lucky streak. I would not call this an amazing test, but it’s probably good enough to make you a lot of money as a VC.</p>
+<p>Of course, in reality, no one starts anything close to 146 companies. At most in a serial entrepreneur’s career you’ll get maybe a handful. This means that, in essentially all cases, no one can discern skill from luck. For any individual founder, including you, a realized outcome is mostly noise around whatever skill is present. This applies to fat-tailed outcomes outside of companies, too. Is the success or failure of an R&amp;D project due to luck, or the skill of researchers? What about the success or failure of your sales team? How well might a potential hire’s resume predict what they would accomplish at your company?</p>
+<p>The psychologist Robin Hogarth gave a name to this kind of setting. In a <strong>kind learning environment</strong>, the rules are stable, similar situations come up again and again, and feedback is fast and accurate. Chess is the classic example: a serious player sees thousands of games, each ends in an unambiguous result within hours, and the rules never change, so experience reliably turns into skill. In a <strong>wicked learning environment</strong>, feedback is delayed, missing or misleading, and the situations you learn from do not match the ones you will face next. Here experience can confidently teach you the wrong lessons.</p>
+<p>Fat tails make an environment wicked almost by construction. The outcomes that dominate the total are, by definition, the ones you see least often, so most of your experience contains little or no information about the events that matter most. You can work for years without ever observing the tail you are trying to learn about. The outcomes you hear about from others have been filtered by survivorship. And in a startup, the result of a decision often arrives years after you made it, mixed together with a particular market, a specific team, and an economy that will not repeat. This means that the 146-company calculation above was actually generous: it assumed every company is a fresh draw from the same distribution, scored promptly and honestly. A real founder gets a handful of slow, noisy draws from different games with rules that keep changing.</p>
+<p>None of this means expertise is impossible in wicked domains, but it looks different. It looks less like a chess master’s instant pattern recognition, and more like calibrated judgment, a habit of reaching for base rates and analogies from other fields, and a disciplined process for collecting feedback the environment will not hand you. David Epstein’s <em>Range</em> is the best accessible treatment of how to learn and work in these settings, and I return to some of its specifics in chapter 13, where the question of whether generalists or specialists are better turns largely on how kind or wicked the work is.</p>
+<p>The difficulty of distinguishing skill from luck, and of learning in a wicked environment, don’t mean you shouldn’t try. Even a small edge in identifying skill or making better decisions can provide a huge advantage compared to choosing randomly. However, there are several pieces of advice you will want to keep in mind:</p>
+<p><strong>Make as much of your work kind as you can.</strong> You cannot make starting a company a kind learning environment overall, but a company is built out of many smaller activities, and some of them can be made kind. A sales call typically ends in a yes or a no within weeks or months. A lab experiment gives an answer in days. A hiring decision can be checked against the person’s performance a year later. If you can break slow, large bets into pieces that each return a clear and honest answer quickly, then those pieces can become places where experience compounds into real skill. Doing this takes discipline, because the wicked environment will not do it for you. You have to write down what you expect before you see the result, actually go back and check, and record the misses as carefully as the hits. The feedback in a wicked environment is not only slow and noisy, it is also flattering, because memory quietly edits predictions to fit outcomes. Without a written record kept on purpose, you will learn from your experience only the lessons you already believed.</p>
+<p><strong>Judge decisions by their quality, and keep score that way.</strong> A good decision is one that looked right given what you could have known and what it cost to know more. Many good decisions lose and many bad ones win. If you only retrospectively reinforce what happened to work based on outcome, you are probably training on noise, and you will also probably bias toward lower-variance situations, which we have shown can actually result in lower expected value. In chapter 9 I describe a way to keep a record of your predictions so you can evaluate the process directly.</p>
+<p><strong>Treat advice from winners with care.</strong> The founders who give keynote talks were sampled from the far right tail. Whatever they did, hundreds of others did the same and failed, and nobody asked those people for their rules. This is <strong>survivorship bias</strong>. Prefer explanations that come with a mechanism and a base rate over stories that come with a famous name.</p>
+<p><strong>Be humble about your own results, in both directions.</strong> A failed company is weak evidence that you are bad at this, and an early success is weak evidence that you are good.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You cannot control which draw you get. You can control how many independent draws you take, how much each one costs, whether its upside is open and whether its downside is capped.</p>
+</div>
+</div>
+<div id="lab-shots" class="lab column-page-right">
+<p><strong>Lab 2.1: Shots on Goal.</strong> Split a fixed budget into bets whose losses are capped. Change the number of bets and the weight of the tail, and watch the distribution of what you take home, including how often a single bet supplies most of it.</p>
+<p>A fixed budget is split evenly into <span class="math inline">n</span> bets. Each bet returns a multiple of its stake drawn from a log-normal distribution with the mean you set and spread <span class="math inline">\sigma</span>. A bet can lose its stake and no more. The portfolio’s multiple is the average of the <span class="math inline">n</span> multiples.</p>
+<div class="lab-mount" data-lab="lab-shots">
+
+</div>
+<p><strong>Things to try</strong></p>
+<ul>
+<li>With the defaults, a single bet has an average multiple of 1.2 and a median far below 1. Set the number of bets to 1 and read the chance of losing money. Then raise it to 30.</li>
+<li>Raise <span class="math inline">\sigma</span> from 1 to 2.5 with the average held fixed. The typical single bet gets worse. What happens to the chance that a 30-bet portfolio doubles?</li>
+<li>Look at the share of proceeds from the single best bet. At <span class="math inline">\sigma = 2</span> and 30 bets, how much of the portfolio is one company?</li>
+<li>Set the average multiple below 1. No number of bets rescues a bet with negative expected value.</li>
+</ul>
+</div>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li>Seth Levine, <a href="https://sethlevine.com/archives/2014/08/venture-outcomes-are-even-more-skewed-than-you-think.html">Venture outcomes are even more skewed than you think</a> (2014). The Correlation Ventures data behind <a href="#fig-02-vc" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>.</li>
+<li>Chris Dixon, <a href="https://a16z.com/performance-data-and-the-babe-ruth-effect-in-venture-capital/">Performance data and the “Babe Ruth” effect in venture capital</a> (2015). The Horsley Bridge data.</li>
+<li>Paul Graham, <a href="http://www.paulgraham.com/swan.html">Black swan farming</a> (2012). What a power-law portfolio feels like from the inside.</li>
+<li>Nassim Nicholas Taleb, <a href="https://en.wikipedia.org/wiki/Antifragile_(book)">Antifragile</a> (2012). The long argument for convexity as a strategy.</li>
+<li>Annie Duke, <a href="https://search.worldcat.org/search?q=Thinking+in+Bets+Annie+Duke">Thinking in Bets</a> (2018). On separating the quality of a decision from the quality of its outcome.</li>
+<li>David Epstein, <a href="https://search.worldcat.org/search?q=Range+Epstein+generalists">Range: Why Generalists Triumph in a Specialized World</a> (2019). How to learn and work in wicked environments; his short essay <a href="https://davidepstein.substack.com/p/kind-and-wicked-learning-environments">“Kind” and “Wicked” Learning Environments</a> is a good preview.</li>
+<li>Robin M. Hogarth, Tomás Lejarraga and Emre Soyer, “The Two Settings of Kind and Wicked Learning Environments,” <em>Current Directions in Psychological Science</em> 24(5) (2015). The formal statement of the idea; Hogarth’s earlier book <a href="https://press.uchicago.edu/ucp/books/book/chicago/E/bo3624460.html">Educating Intuition</a> (2001) gives practical guidelines.</li>
+<li>Daniel Kahneman and Gary Klein, <a href="https://pubmed.ncbi.nlm.nih.gov/19739881/">Conditions for intuitive expertise: a failure to disagree</a>, <em>American Psychologist</em> (2009). When a professional’s intuition deserves trust.</li>
+<li>Michael Mauboussin, <a href="https://search.worldcat.org/search?q=The+Success+Equation+Mauboussin">The Success Equation</a> (2012). How to estimate the mix of skill and luck in a domain.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="assets/labkit.js"></script>
+<script src="assets/book.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/am0053\.github\.io\/entrepreneurship-for-physicists");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "am0053/entrepreneurship-for-physicists";
+    script.dataset.repoId = "R_kgDOV4J_Xg";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOV4J_Xs4DLwgB";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-fat-tails.html" class="pagination-link" aria-label="A World of Fat Tails">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">A World of Fat Tails</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-dont-die.html" class="pagination-link" aria-label="Don't Die">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Don’t Die</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
